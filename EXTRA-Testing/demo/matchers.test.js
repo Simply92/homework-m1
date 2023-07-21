@@ -1,4 +1,4 @@
-xdescribe('Tests that will pass', () => {
+describe('Tests that will pass', () => {
   it('should pass if exact match', () => {
     const number = 3;
     const string = 'Franco';
@@ -16,19 +16,19 @@ xdescribe('Tests that will pass', () => {
   });
 })
 
-xdescribe('Tests that will not pass', () => {
+describe('Tests that will not pass', () => {
   it('should fail if not exact match (object)', () => {
     const obj = {name: 'Franco', age: 27};
-    expect(obj).toBe({name: 'Franco', age: 27});
+    expect(obj).toEqual({name: 'Franco', age: 27});
   });
   
   it('should fail if not exact match (array)', () => {
     const array = [1,2,3,4,5];
-    expect(array).toBe([1,2,3,4,5]);
+    expect(array).toEqual([1,2,3,4,5]);
   });
 })
 
-xdescribe('Extra matchers', () => {
+describe('Extra matchers', () => {
 
     it('toBeNull', () => {
       expect(null).toBeNull();

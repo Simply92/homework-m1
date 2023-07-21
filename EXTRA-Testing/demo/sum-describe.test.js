@@ -20,7 +20,7 @@ describe('Decimal numbers', () => {
   });
 });
 
-describe.only('Invalid inputs', () => {
+describe('Invalid inputs', () => {
   it('should throw an TypeError if first parameter is not a number', () => {
     expect(() => sum('Franco', 5)).toThrow(TypeError);
   });
